@@ -4,6 +4,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite,
 		C3.Plugins.Text,
 		C3.Plugins.TiledBg,
+		C3.Plugins.Button,
 		C3.Behaviors.DragnDrop,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.System.Cnds.OnLayoutStart,
@@ -26,11 +27,13 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
+		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.Sprite.Cnds.IsOverlapping,
 		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
 		C3.Plugins.Sprite.Cnds.OnCreated,
-		C3.Plugins.Sprite.Acts.SetAnimFrame,
-		C3.Plugins.System.Exps.int
+		C3.Plugins.System.Exps.int,
+		C3.Plugins.Button.Cnds.OnClicked
 	];
 };
 self.C3_JsPropNameTable = [
@@ -46,16 +49,18 @@ self.C3_JsPropNameTable = [
 	{InfraTicket: 0},
 	{MajorIncident: 0},
 	{AppsEngineer: 0},
-	{TiledBackground: 0},
 	{SrApp: 0},
 	{GameOver: 0},
+	{TiledBackground: 0},
+	{Button: 0},
 	{DragDrop: 0},
 	{Engineers: 0},
 	{Tickets: 0},
 	{Breeches: 0},
-	{Resolves: 0},
+	{Score: 0},
 	{Clock: 0},
 	{TicketSpawnFrequency: 0},
+	{TicketSpawnAmount: 0},
 	{TicketSpawnFrequencyRate: 0}
 ];
 
@@ -66,9 +71,10 @@ self.InstanceType = {
 	InfraTicket: class extends self.ISpriteInstance {},
 	MajorIncident: class extends self.ISpriteInstance {},
 	AppsEngineer: class extends self.ISpriteInstance {},
-	TiledBackground: class extends self.ITiledBackgroundInstance {},
 	SrApp: class extends self.ISpriteInstance {},
 	GameOver: class extends self.ITextInstance {},
+	TiledBackground: class extends self.ITiledBackgroundInstance {},
+	Button: class extends self.IButtonInstance {},
 	Engineers: class extends self.ISpriteInstance {},
 	Tickets: class extends self.ISpriteInstance {}
 }
